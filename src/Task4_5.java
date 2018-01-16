@@ -6,7 +6,7 @@ import Utils.ArrayUtils;
 
 import java.util.Scanner;
 
-public class Task5 {
+public class Task4_5 {
     public static void main(String[] args) {
         int array[] = ArrayUtils.createRandomArray(10);
         System.out.print("Enter number to find: ");
@@ -15,7 +15,7 @@ public class Task5 {
         int count = 0;
         System.out.println("");
         for (int i = 0; i < array.length; i++) {
-            if(array[i]==numberToFind){
+            if (array[i] == numberToFind) {
                 count++;
             }
         }

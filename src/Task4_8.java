@@ -4,7 +4,7 @@
 
 import Utils.ArrayUtils;
 
-public class Task8 {
+public class Task4_8 {
     public static void main(String[] args) {
         int[] array = ArrayUtils.createRandomArray(10);
         for (int i = 0; i < array.length; i++) {

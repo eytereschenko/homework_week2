@@ -6,7 +6,7 @@ import Utils.*;
 
 import java.util.Scanner;
 
-public class Task2 {
+public class Task4_2 {
     public static void main(String[] args) {
         System.out.println("Enter size of your array: ");
         Scanner scanner = new Scanner(System.in);

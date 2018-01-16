@@ -5,7 +5,7 @@
 
 import Utils.ArrayUtils;
 
-public class Task7 {
+public class Task4_7 {
     public static void main(String[] args) {
         int size = 5;
         int[] array1 = ArrayUtils.createRandomArray(size);

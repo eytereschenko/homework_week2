@@ -1,8 +1,9 @@
 import Utils.*;
+
 /*
 4) Заданы два массива одинаковой длинны с любыми значениями скопировать данные из первого массива во второй
  */
-public class Task4 {
+public class Task4_4 {
     public static void main(String[] args) {
         int[] arrayA = ArrayUtils.createRandomArray(5);
         int[] arrayB = ArrayUtils.createRandomArray(5);
