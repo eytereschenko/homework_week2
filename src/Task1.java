@@ -1,6 +1,6 @@
 import Utils.*;
 /*
-
+1) Найти минимальное и максимальное значения в массиве и вывести их на консоль
  */
 public class Task1 {
     public static void main(String[] args) {
