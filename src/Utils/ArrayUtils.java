@@ -78,4 +78,24 @@ public class ArrayUtils {
         }
         return number;
     }
+
+    public static int[] sumOfArrays(int[] array1, int[] array2) {
+        int[] arraySum = new int[array1.length];
+        if (array1.length != array2.length) {
+            System.out.println("Arrays should be with same length");
+        } else {
+            for (int i = 0; i < array1.length; i++) {
+                arraySum[i] = array1[i] + array2[i];
+            }
+        }
+        return arraySum;
+    }
+
+    public static int[] createArrayFrom25To75(int size){
+        int[] array = new int[size];
+        for (int i = 0; i < size; i++) {
+            array[i] =(int) ((Math.random()*50)+25);
+        }
+        return array;
+    }
 }
