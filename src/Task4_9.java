@@ -22,9 +22,9 @@ public class Task4_9 {
                 count2++;
             }
         }
-        System.out.print("1: ");
+        System.out.print("1st array: ");
         ArrayUtils.printArray(array1);
-        System.out.print("2: ");
+        System.out.print("2nd array: ");
         ArrayUtils.printArray(array2);
         if (count1 > count2) {
             System.out.println("Array 1 has more even numbers");

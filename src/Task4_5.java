@@ -19,6 +19,7 @@ public class Task4_5 {
                 count++;
             }
         }
+        System.out.print("You random array is: ");
         ArrayUtils.printArray(array);
         System.out.println("Number " + numberToFind + " present in array " + count + " times.");
     }

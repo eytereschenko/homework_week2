@@ -13,6 +13,7 @@ public class Task4_3 {
         Scanner scanner = new Scanner(System.in);
         int size = scanner.nextInt();
         int[] array = ArrayUtils.createRandomArray(size);
+        System.out.print("You random array is: ");
         ArrayUtils.printArray(array);
         int placeOfMax = ArrayUtils.findPlaceOfMax(array);
         int placeOfMin = ArrayUtils.findPlaceOfMin(array);
@@ -20,6 +21,7 @@ public class Task4_3 {
         int min = ArrayUtils.findMin(array);
         array[placeOfMax] = min;
         array[placeOfMin] = max;
+        System.out.print("Changed array is: ");
         ArrayUtils.printArray(array);
     }
 }

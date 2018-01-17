@@ -13,7 +13,6 @@ public class ArrayUtils {
 
     public static void printArray(int[] array) {
 
-        System.out.print("Yor random array is: ");
         for (int anArray : array) {
             System.out.print(anArray + " ");
         }

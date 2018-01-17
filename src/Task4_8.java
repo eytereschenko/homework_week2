@@ -18,6 +18,7 @@ public class Task4_8 {
                 }
             }
         }
+        System.out.print("You random array is: ");
         ArrayUtils.printArray(array);
 
     }
