@@ -98,4 +98,14 @@ public class ArrayUtils {
         }
         return array;
     }
+
+    public static int[] splitArray(int[] arr, int start, int end) {
+        // обрезать массив по границам start и end
+        int newLength = end - start + 1;
+        int[] resultArray = new int[newLength];
+        for (int i = start; i <=end ; i++) {
+            resultArray[i-start] = arr[i];
+        }
+        return resultArray;
+    }
 }
