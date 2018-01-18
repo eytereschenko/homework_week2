@@ -10,8 +10,10 @@ public class Task4_9 {
         int size2 = 12;
         int count1 = 0;
         int count2 = 0;
-        int[] array1 = ArrayUtils.createArrayFrom25To75(size1);
-        int[] array2 = ArrayUtils.createArrayFrom25To75(size2);
+        int start = 25;
+        int end = 75;
+        int[] array1 = ArrayUtils.createArrayFromAToB(size1, 25, 75);
+        int[] array2 = ArrayUtils.createArrayFromAToB(size2, 25, 75);
         for (int i = 0; i < size1; i++) {
             if (array1[i] % 2 == 0) {
                 count1++;

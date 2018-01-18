@@ -1,6 +1,7 @@
 package Utils;
 
 import java.lang.reflect.Array;
+import java.util.Scanner;
 
 public class ArrayUtils {
     public static int[] createRandomArray(int size) {
@@ -90,10 +91,10 @@ public class ArrayUtils {
         return arraySum;
     }
 
-    public static int[] createArrayFrom25To75(int size) {
+    public static int[] createArrayFromAToB(int size, int start, int end) {
         int[] array = new int[size];
         for (int i = 0; i < size; i++) {
-            array[i] = (int) ((Math.random() * 50) + 25);
+            array[i] = (int) ((Math.random() * (end - start)) + start);
         }
         return array;
     }
@@ -118,4 +119,47 @@ public class ArrayUtils {
         }
         return array;
     }
+
+    public static int[] insertSort(int[] array) {
+        int buffer = array[0];
+        for (int i = 0; i < array.length; i++) {
+            for (int j = i; j > 0 && array[j - 1] > array[j]; j--) {
+                buffer = array[j];
+                array[j] = array[j - 1];
+                array[j - 1] = buffer;
+            }
+        }
+        return array;
+    }
+
+    public static int[] enterArrayFromKeybord() {
+        System.out.print("Enter array size: ");
+        Scanner scanner = new Scanner(System.in);
+        int size = scanner.nextInt();
+        int[] array = new int[size];
+        System.out.println();
+        System.out.print("Enter " + size + " elements of your array: ");
+        for (int i = 0; i < size; i++) {
+            array[i] = scanner.nextInt();
+        }
+        return array;
+    }
+
+    public static int[] selectSort(int[] array) {
+        int buffer;
+        for (int i = 0; i < array.length - 1; i++) {
+            int min = i;
+            for (int j = i + 1; j < array.length; j++) {
+                if (array[j] < array[min]) {
+                    min = j;
+                }
+            }
+            buffer = array[i];
+            array[i] = array[min];
+            array[min] = buffer;
+        }
+        return array;
+    }
+
+
 }
