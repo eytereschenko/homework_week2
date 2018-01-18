@@ -161,5 +161,31 @@ public class ArrayUtils {
         return array;
     }
 
+    public static int[] createRandomArrayWithUniqValuesFromAToB(int size, int from, int to) {
+        int array[] = new int[size];
+        //запишем числа от from до to в массив
+        int arrayFromTo[] = new int[to];
+        for (int i = from; i <= to; i++) {
+            arrayFromTo[i - 1] = i;
+        }
+        for (int i = 0; i < size; i++) {
+            int j = (int) (Math.random() * (to - from - i) + from + i);
+            array[i] = arrayFromTo[j];
+            arrayFromTo[j] = from - i - 1;
+            sortArrayByBubble(arrayFromTo);
+        }
+        return array;
+    }
 
+    public static int compareArrays(int[] arr1, int[] arr2) {
+        int result = 0;
+        for (int i = 0; i < arr1.length; i++) {
+            for (int j = 0; j < arr2.length; j++) {
+                if (arr1[i] == arr2[j]) {
+                    result++;
+                }
+            }
+        }
+        return result;
+    }
 }
