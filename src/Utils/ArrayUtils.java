@@ -90,10 +90,10 @@ public class ArrayUtils {
         return arraySum;
     }
 
-    public static int[] createArrayFrom25To75(int size){
+    public static int[] createArrayFrom25To75(int size) {
         int[] array = new int[size];
         for (int i = 0; i < size; i++) {
-            array[i] =(int) ((Math.random()*50)+25);
+            array[i] = (int) ((Math.random() * 50) + 25);
         }
         return array;
     }
@@ -102,9 +102,20 @@ public class ArrayUtils {
         // обрезать массив по границам start и end
         int newLength = end - start + 1;
         int[] resultArray = new int[newLength];
-        for (int i = start; i <=end ; i++) {
-            resultArray[i-start] = arr[i];
+        for (int i = start; i <= end; i++) {
+            resultArray[i - start] = arr[i];
         }
         return resultArray;
+    }
+
+    public static int[] invertArray(int[] array) {
+        int buffer;
+        int length = array.length;
+        for (int i = 0; i < length / 2; i++) {
+            buffer = array[i];
+            array[i] = array[length - i - 1];
+            array[length - i - 1] = buffer;
+        }
+        return array;
     }
 }
