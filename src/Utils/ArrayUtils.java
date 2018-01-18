@@ -188,4 +188,15 @@ public class ArrayUtils {
         }
         return result;
     }
+
+    public static int[] moveArray(int[] arr, int steps) {
+        int[] arrResult = new int[arr.length];
+        for (int j = 0; j < steps; j++) {
+            arrResult[0] = arr[arr.length - 1];
+            for (int i = 1; i < arr.length; i++) {
+                arrResult[i] = arr[i - 1];
+            }
+        }
+        return arrResult;
+    }
 }
